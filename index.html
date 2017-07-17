@@ -1,12 +1,218 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ko">
 <head>
-<title>SIG SC Webpage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>학술향 동인 서클 SIG SC</title>
+    <link href="css/index.css" rel="stylesheet">
+    <script>
+        var slideIndex = 1;
+        var slides = setInterval(function() {
+            showDivs(slideIndex += 1);
+        }, 7000);
+        showDivs(slideIndex);
+        
+        
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+        function selectDivs(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var y = document.getElementsByClassName("display");
+            if (n > x.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.remove("selected");
+                y[i].classList.remove("selected");
+            }
+            if (x.length > 0)
+            {
+                x[slideIndex-1].classList.add("selected");
+                y[slideIndex-1].classList.add("selected");
+            }
+            clearInterval(slides);
+            slides = setInterval(function() {
+                showDivs(slideIndex += 1);
+            }, 7000);
+        }
+    </script>      
 </head>
-
 <body>
-Dummy page
-</body>
+    <header>
+        <h1 id="logo">
+           <a href="./index.html" class="logo pborder"></a>
+        </h1>
 
+        <nav>
+            <div><a href="./previous.html">기존 회지</a></div>
+            <div><a href="./participate.html">참가 신청</a></div>
+            <div><a href="./credit.html">CREDIT</a></div>
+            <div><a href="./notice.html">알림 사항<span class="nav_notice"></span></a></div>
+        </nav>
+    </header>
+    <section>
+       
+        <div class="banner blackbg">
+            <div class="wrap slides">
+                
+                <div class="slider">
+                    <div class="mySlides selected">
+                        <div>
+                            <div>
+                                <span class="white bold">SIG SC는?</span>
+                                <div class="wborder">
+                                    SIG SC(Special Interest Group on Sub-Culture)는 한국의 학술향 동인 서클로, <br>
+                                    <br>
+                                    서브컬쳐에 관련된 학술적인 접근과 <br>
+                                    학문 분야들에 대한 서브컬쳐적 접근을 지향하고 있습니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mySlides">
+                        <div>
+                            <div>
+                                <span class="white bold">SIG SC는?</span>
+                                <div class="wborder">
+                                    논리적 가상 컨퍼런스인 SIG SC Conference의 개최를 통해 <br>
+                                    <br>
+                                    참가자들 간의 성과를 공유하고 <br>
+                                    결과물을 회지 Proceedings of SSCC로 발간하고 있습니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mySlides">
+                        <div>
+                            <div>
+                                <span class="white bold">SSCC 2nd 참가자 모집 중</span>
+                                <div class="wborder">
+                                    SSCC 2nd의 참가자를 모집 중입니다. <br>
+                                    참가 신청은 2017년 8월 8일(화)까지입니다. <br> <br>
+                                    <a href="./participate.html" class="sbutton pinkbg white" id="publishbutton">
+                                        신청 페이지
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mySlides">
+                        <div>
+                            <div>
+                                <span class="white bold">Proceedings of SSCC 1st 웹 공개</span>
+                                <div class="wborder">
+                                    &nbsp;<br>
+                                    지난 회지인 Proceedings of SSCC 1st를 웹을 통해 공개하고 있습니다. <br>
+                                    <a href="./previous.html" class="sbutton black mintbg" id="partbutton">
+                                        Proceedings of SSCC 1st 보러가기
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="display-left" onclick="plusDivs(-1)"></button>
+                <button class="display-right" onclick="plusDivs(1)"></button>
+                <div class="displays">
+                    <div>
+                        <button class="display selected" onclick="selectDivs(1)"></button>
+                        <button class="display" onclick="selectDivs(2)"></button>
+                        <button class="display" onclick="selectDivs(3)"></button>
+                        <button class="display" onclick="selectDivs(4)"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div id="wmain">
+           <div class="wrap">
+                <div class="container">
+                    <h2 class="title pink">HISTORY</h2>
+                    <div class="table mt80">
+                        <table>
+                            <tr>
+                                <th>2016년 봄</th>
+                                <td>SIG SC 결성</td>
+                            </tr>
+                            <tr>
+                                <th>2016년 8월</th>
+                                <td>
+                                    Proceedings of SSCC 1st 발간<br>제 8회 케이크스퀘어 참가
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>2017년 6월</th>
+                                <td>Proceedings of SSCC 1st 웹 공개</td>
+                            </tr>
+                            <tr>
+                                <th>2017년 여름</th>
+                                <td>SSCC 2nd 참가자 모집 중</td>
+                            </tr>
+                            <tr>
+                                <th>2017년 12월 <span class="gray">(예정)</span></th>
+                                <td>
+                                    Proceedings of SSCC 2nd 발간 및 <br>
+                                    제 11회 디.페스타 Day 1 참가 예정
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <ul id="historylist">
+                        <li><span class="subth">2016년 봄</span></li>
+                        <li><span class="subtd">SIG SC 결성</span></li>
+                        <li><span class="subth">2016년 8월</span></li>
+                        <li><span class="subtd">Proceedings of SSCC 1st 발간<br>제 8회 케이크스퀘어 참가</span></li>
+                        <li><span class="subth">2017년 6월</span></li>
+                        <li><span class="subtd">Proceedings of SSCC 1st 웹 공개</span></li>
+                        <li><span class="subth">2017년 여름</span></li>
+                        <li><span class="subtd">SSCC 2nd 참가자 모집 중</span></li>
+                        <li><span class="subth">2017년 12월 <span class="gray">(예정)</span></span></li>
+                        <li><span class="subtd">Proceedings of SSCC 2nd 발간 및 <br/>제 11회 디.페스타 Day 1 참가 예정</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="contact">
+            <div class="wrap">
+               <div class="container">
+                    <div id="left">
+                        <h2 class="title white">Contact</h2><br/>
+                        <br/>
+                        <a href="mailto:sigsubculture@gmail.com"><span class="DM">sigsubculture@gmail.com</span></a>
+                        <a href="https://twitter.com/SIGSubCulture"><span class="twt">@SIGSubCulture</span></a>
+                    </div>
+                    <div id="right">
+                        <div id="tweet">
+                            <a class="twitter-timeline" href="https://twitter.com/SIGSubCulture">Tweets by SIGSubCulture</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+        
+        
+    </section>
+    <footer>
+        SIG SC<br/>
+        <a href="mailto:sigsubculture@gmail.com">sigsubculture@gmail.com</a> | <a href="https://twitter.com/SIGSubCulture">@SIGSubCulture</a>
+    </footer>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-102685232-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</body>
 </html>
