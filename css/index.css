@@ -76,6 +76,14 @@
         margin-right: 20px !important;
     }
     
+    #semi_nav li.selected>div>a {
+        color: rgb(255,255,255);
+    }
+    
+    #semi_nav li>div>a {
+        color: rgb(198,215,220);
+    }
+    
     #semi_sect {
         width: 740px;
     }
@@ -85,6 +93,11 @@
     }
     
     #cover {
+        margin-right: 16px;
+        margin-bottom: 28px;
+    }
+    
+    .cover {
         margin-right: 16px;
         margin-bottom: 28px;
     }
@@ -264,6 +277,10 @@
     }
     
     #cover {
+        margin: 20px auto;
+    }
+    
+    .cover {
         margin: 20px auto;
     }
     
@@ -779,6 +796,16 @@ span.twt {
     width: 300px;
     height: 423px;
     background-image: url(../image/Cover_1st.jpg);
+    background-repeat: no-repeat;
+    background-size: 300px 423px;
+    
+}
+
+#cover_02 {
+    display: block;
+    width: 300px;
+    height: 423px;
+    background-image: url(../image/Cover_2nd.jpg);
     background-repeat: no-repeat;
     background-size: 300px 423px;
     
